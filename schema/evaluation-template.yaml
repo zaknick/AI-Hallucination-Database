@@ -1,0 +1,64 @@
+id: ""
+title: ""
+category: ""
+date_tested: ""
+evaluator: "zaknick"
+
+test_conditions:
+  prompt_used_identically: true
+  fresh_chat_for_each_model: true
+  web_browsing_enabled: false
+  additional_context: ""
+
+prompt: |
+  Paste the exact prompt here.
+
+models:
+  gpt:
+    provider: "OpenAI"
+    model_name: ""
+    response: |
+      Paste the complete GPT response here.
+
+  claude:
+    provider: "Anthropic"
+    model_name: ""
+    response: |
+      Paste the complete Claude response here.
+
+  gemini:
+    provider: "Google"
+    model_name: ""
+    response: |
+      Paste the complete Gemini response here.
+
+error:
+  detected: true
+  type: ""
+  description: |
+    Describe the factual error, fabricated information,
+    unsupported claim, or misleading statement.
+
+correct_answer: |
+  Write the corrected answer here.
+
+evidence:
+  - source_title: ""
+    publisher_or_author: ""
+    url: ""
+    access_date: ""
+    relevant_claim: |
+      Explain what this source verifies.
+
+explanation: |
+  Explain why the model response is incorrect and how the
+  evidence supports the corrected answer.
+
+severity:
+  rating: ""
+  justification: |
+    Explain why the error is Low, Medium, High, or Critical.
+
+evaluator_notes: |
+  Add observations about uncertainty, model behavior,
+  testing limitations, or unusual differences between responses.
