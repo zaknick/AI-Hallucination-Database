@@ -64,7 +64,13 @@ Formatting differences between the screenshots and the Markdown transcriptions m
 
 Only one screenshot was collected for each model response during this pilot case.
 
-The screenshots do not display the complete responses. The full transcriptions are preserved in the corresponding files under `responses/`, but the omitted portions cannot be independently verified from the screenshots alone.
+The screenshots do not display the complete responses. The full transcriptions are preserved in the corresponding files:
+
+- [ChatGPT full response](../../responses/chatgpt.md)
+- [Claude full response](../../responses/claude.md)
+- [Gemini full response](../../responses/gemini.md)
+
+The portions omitted from the screenshots cannot be independently verified from the screenshots alone.
 
 This limitation applies only to the visual capture process and does not affect the evaluator evidence used to verify the factual claims.
 
