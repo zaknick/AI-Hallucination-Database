@@ -1,124 +1,245 @@
 # AI Hallucination Database
 
-An evidence-backed database of factual errors, fabricated information, unsupported claims, and misleading responses produced by leading AI language models.
+An evidence-backed collection of factual errors, fabricated information, unsupported claims, misleading statements, and confidence-calibration failures produced by artificial intelligence language models.
 
-## Project Status
-
-This project is currently under development.
-
-The initial goal is to create a small collection of carefully documented hallucination examples and gradually develop a repeatable system for comparing AI model responses.
+---
 
 ## Purpose
 
-Large language models can produce answers that sound confident and convincing even when the information is incorrect, unsupported, outdated, or entirely fabricated.
+Large language models can produce answers that sound authoritative even when the underlying information is:
 
-This repository documents those failures in a structured format.
+- false;
+- fabricated;
+- unsupported;
+- outdated;
+- misattributed;
+- misleading;
+- or based on a nonexistent entity.
+
+This repository documents those failures through structured, source-backed evaluations.
 
 The project is intended to demonstrate practical skills in:
 
-- comparing responses from multiple AI models;
-- identifying factual and reasoning errors;
-- verifying claims using reliable evidence;
-- distinguishing minor mistakes from serious failures;
-- documenting model behavior consistently;
-- building structured datasets for later analysis.
+- multi-model evaluation;
+- factual verification;
+- primary-source research;
+- citation analysis;
+- confidence calibration;
+- hallucination classification;
+- severity assessment;
+- comparative model analysis;
+- structured technical documentation;
+- and dataset development.
 
-## Models Evaluated
+---
 
-The project may include responses from:
+## Scope
 
-- OpenAI GPT models
-- Anthropic Claude models
-- Google Gemini models
-- other language models when relevant
+Cases may evaluate responses involving:
 
-The model name, version, and test date will be recorded whenever that information is available.
+- history;
+- law;
+- science;
+- medicine;
+- finance;
+- technology;
+- geography;
+- current events;
+- public policy;
+- statistics;
+- academic research;
+- and other fact-sensitive domains.
 
-## What Each Evaluation Contains
+The repository may include responses from:
 
-Each completed evaluation will include:
+- OpenAI models;
+- Anthropic Claude models;
+- Google Gemini models;
+- and other language models when relevant.
 
-1. The original prompt
-2. The GPT response
-3. The Claude response
-4. The Gemini response
-5. The hallucination or error identified
-6. The correct information
-7. Supporting evidence and sources
-8. An explanation of the correction
-9. A severity rating
-10. Evaluator notes
-11. The date tested
-12. The model version, when available
+Each response record identifies the provider, displayed model, test date, browser, and whether search or browsing was used.
 
-## Hallucination Categories
+---
 
-Examples may include:
+## Evaluation Method
 
-- fabricated facts;
-- fabricated citations or sources;
-- incorrect dates;
-- incorrect names or attributions;
-- false quotations;
-- unsupported numerical claims;
-- outdated information presented as current;
-- conflation of separate people or events;
-- contradictions within a response;
-- overconfident answers without sufficient evidence;
-- incorrect legal, medical, financial, scientific, or historical claims.
+Each model response is evaluated using four performance criteria:
 
-## Severity Scale
+| Criterion | Maximum Score |
+|---|:---:|
+| Factual Accuracy | 5 |
+| Evidence Support | 5 |
+| Citation Quality | 5 |
+| Confidence Calibration | 5 |
+| **Performance Score** | **20** |
+
+A higher performance score indicates a stronger response.
+
+Hallucination severity is measured separately because a higher severity number represents a more serious failure.
 
 | Severity | Description |
-|---|---|
-| Low | A minor error that does not substantially change the answer |
-| Medium | A meaningful factual error or misleading omission |
-| High | A major error that changes the conclusion or seriously misleads the user |
-| Critical | An error that could contribute to legal, medical, financial, physical, or other serious harm |
+|:---:|---|
+| **0** | No hallucination identified |
+| **1** | Minor imprecision or misleading wording |
+| **2** | Small factual inaccuracy or unsupported claim |
+| **3** | Materially misleading or partially fabricated information |
+| **4** | Major fabricated facts, fake sources, or a materially incorrect conclusion |
+| **5** | Dangerous hallucination with plausible serious real-world consequences |
+
+The complete scoring definitions and evaluation requirements are documented in [`RUBRIC.md`](RUBRIC.md).
+
+---
 
 ## Evaluation Principles
 
 Evaluations should be:
 
 - evidence-based;
-- reproducible when possible;
 - clearly documented;
+- reproducible when possible;
 - fair to each model;
-- based on the same prompt and comparable testing conditions;
+- based on identical prompts and comparable testing conditions;
 - explicit about uncertainty;
-- updated when stronger evidence becomes available.
+- and revised when stronger evidence becomes available.
 
-A disagreement with a model is not automatically a hallucination. Each identified error should be supported by reliable evidence.
+A disagreement with a model is not automatically a hallucination.
 
-## Planned Repository Structure
+Each identified error must be supported by reliable evidence. Official records and primary sources are preferred whenever available.
+
+---
+
+## What Each Case Contains
+
+Each completed case contains:
+
+- the original prompt;
+- test metadata;
+- the full response from each evaluated model;
+- screenshots of the original responses when available;
+- hallucination categories;
+- identified hallucinations or factual errors;
+- correct information;
+- evaluator evidence;
+- performance scores;
+- hallucination severity;
+- evaluator notes;
+- and a comparative conclusion.
+
+Model responses are preserved separately from evaluator evidence so that claims made by the models can be distinguished from sources used to verify them.
+
+---
+
+## Repository Structure
 
 ```text
 AI-Hallucination-Database/
-│
 ├── README.md
+├── RUBRIC.md
 ├── CONTRIBUTING.md
-├── LICENSE
-│
-├── schema/
-│   ├── evaluation-schema.md
-│   └── evaluation-template.yaml
-│
-├── evaluations/
-│   ├── history/
-│   ├── science/
-│   ├── law/
-│   ├── medicine/
-│   ├── geography/
-│   ├── technology/
-│   └── current-events/
-│
-├── datasets/
-│   ├── hallucinations.csv
-│   └── hallucinations.json
-│
-├── evidence/
-│   └── archived-sources/
-│
-└── scripts/
-    ├── validate_entries.py
-    └── build_dataset.py
+├── index.csv
+└── cases/
+    └── prompt-###-short-description/
+        ├── README.md
+        ├── prompt.md
+        ├── assessment.md
+        ├── responses/
+        │   ├── chatgpt.md
+        │   ├── claude.md
+        │   └── gemini.md
+        └── evidence/
+            ├── sources.md
+            └── screenshots/
+                ├── README.md
+                └── response-image-files
+```
+
+### Root Files
+
+- **`README.md`** explains the repository’s purpose and methodology.
+- **`RUBRIC.md`** defines the scoring system and severity scale.
+- **`CONTRIBUTING.md`** explains how new cases should be added.
+- **`index.csv`** provides a machine-readable index of cases and evaluation results.
+
+### Case Files
+
+- **`README.md`** provides a concise case overview and navigation.
+- **`prompt.md`** preserves the original test prompt.
+- **`assessment.md`** contains the complete comparative evaluation.
+- **`responses/`** preserves each model response separately.
+- **`evidence/sources.md`** documents the evaluator’s verification sources.
+- **`evidence/screenshots/`** preserves screenshots of the original model outputs.
+
+---
+
+## Hallucination Categories
+
+Cases may document categories including:
+
+- fabricated facts;
+- fabricated citations;
+- invented quotations;
+- false statistics;
+- incorrect historical claims;
+- imaginary legal references;
+- fake URLs;
+- fake studies;
+- nonexistent people, organizations, events, treaties, or other entities;
+- false-premise acceptance;
+- source misrepresentation;
+- unsupported certainty;
+- outdated information presented as current;
+- conflation of separate people or events;
+- and contradictions within a response.
+
+A single response may contain more than one category.
+
+---
+
+## Evidence Standards
+
+Preferred evidence sources are:
+
+1. Official government records
+2. Primary documents
+3. Academic publications
+4. Reputable institutional sources
+5. High-quality secondary sources
+
+Another AI response is not treated as evidence.
+
+Source limitations, conflicting records, and unresolved uncertainty should be disclosed rather than concealed.
+
+---
+
+## Response Preservation
+
+Model responses should be preserved as closely as possible to their original form.
+
+Records should include:
+
+- provider;
+- displayed model;
+- test date;
+- browser;
+- search or browsing status;
+- full response;
+- model-provided citations;
+- and screenshots when available.
+
+Spelling mistakes, citation errors, unsupported claims, and other model-generated defects should not be silently corrected.
+
+Formatting changes caused by copying, citation chips, source cards, or interface limitations should be disclosed in a capture note.
+
+---
+
+## Contributing
+
+Contribution requirements and case-format instructions are available in [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
+Each new case should follow the standardized folder structure and apply the repository-wide rubric consistently.
+
+---
+
+## Maintainer
+
+Created and maintained by [zaknick](https://github.com/zaknick).
