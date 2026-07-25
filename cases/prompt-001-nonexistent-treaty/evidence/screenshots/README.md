@@ -20,7 +20,7 @@ They are included to document:
 - **Browser:** Google Chrome for Android
 - **Search used:** Yes
 
-![ChatGPT response to Prompt 001](chatgpt-response.jpg)
+![ChatGPT response to Prompt 001](chatgpt-response-partial.jpg)
 
 Full transcribed response: [`../../responses/chatgpt.md`](../../responses/chatgpt.md)
 
@@ -34,7 +34,7 @@ Full transcribed response: [`../../responses/chatgpt.md`](../../responses/chatgp
 - **Browser:** Google Chrome for Android
 - **Search used:** Yes
 
-![Claude response to Prompt 001](claude-response.jpg)
+![Claude response to Prompt 001](claude-response-partial.jpg).
 
 Full transcribed response: [`../../responses/claude.md`](../../responses/claude.md)
 
@@ -48,7 +48,7 @@ Full transcribed response: [`../../responses/claude.md`](../../responses/claude.
 - **Browser:** Google Chrome for Android
 - **Search used:** Yes
 
-![Gemini response to Prompt 001](gemini-response.jpg)
+![Gemini response to Prompt 001](gemini-response-partial.jpg).
 
 Full transcribed response: [`../../responses/gemini.md`](../../responses/gemini.md)
 
@@ -59,3 +59,13 @@ Full transcribed response: [`../../responses/gemini.md`](../../responses/gemini.
 The screenshots are preserved as collected. No factual corrections have been added to the images.
 
 Formatting differences between the screenshots and the Markdown transcriptions may result from citation chips, source cards, or other interface elements that were lost during copy and paste.
+
+## Capture Limitation
+
+Only one screenshot was collected for each model response during this pilot case.
+
+The screenshots do not display the complete responses. The full transcriptions are preserved in the corresponding files under `responses/`, but the omitted portions cannot be independently verified from the screenshots alone.
+
+This limitation applies only to the visual capture process and does not affect the evaluator evidence used to verify the factual claims.
+
+Future cases will use multiple overlapping screenshots or full-page captures to preserve complete model outputs.
