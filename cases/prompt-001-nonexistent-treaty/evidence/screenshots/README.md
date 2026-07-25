@@ -34,7 +34,7 @@ Full transcribed response: [`../../responses/chatgpt.md`](../../responses/chatgp
 - **Browser:** Google Chrome for Android
 - **Search used:** Yes
 
-![Claude response to Prompt 001](claude-response-partial.jpg).
+![Claude response to Prompt 001](claude-response-partial.jpg)
 
 Full transcribed response: [`../../responses/claude.md`](../../responses/claude.md)
 
@@ -48,7 +48,7 @@ Full transcribed response: [`../../responses/claude.md`](../../responses/claude.
 - **Browser:** Google Chrome for Android
 - **Search used:** Yes
 
-![Gemini response to Prompt 001](gemini-response-partial.jpg).
+![Gemini response to Prompt 001](gemini-response-partial.jpg)
 
 Full transcribed response: [`../../responses/gemini.md`](../../responses/gemini.md)
 
